@@ -1,0 +1,386 @@
+{
+	"info": {
+		"_postman_id": "c9ab11a4-04f7-4e67-b50b-ee415ff6d407",
+		"name": "Ejercicios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2047421"
+	},
+	"item": [
+		{
+			"name": "Consultar Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/productos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Consultar Productos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/productos/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"productos",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Nov 2022 02:22:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Martillo\",\n        \"description\": \"Peso 12 oz Garantía 3 meses Ancho18.3 cm Material de la cabeza Acero Espesor 2.7 cm Tipo de martillo Uña\",\n        \"price\": 3600.45,\n        \"image\": \"http://placeimg.com/640/480/tech\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Set destornilladores 4 piezas CC226\",\n        \"description\": \"Peso 12 oz Garantía 3 meses Ancho18.3 cm Material de la cabeza Acero Espesor 2.7 cm Tipo de martillo Uña\",\n        \"price\": 9900.45,\n        \"image\": \"https://homecenterco.scene7.com/is/image/SodimacCO/62307?fmt=jpg\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Martillo Hierro\",\n        \"description\": \"Peso 12 oz Garantía 3 meses Ancho18.3 cm Material de la cabeza Acero Espesor 2.7 cm Tipo de martillo Uña\",\n        \"price\": 3600.45,\n        \"image\": \"http://placeimg.com/640/480/tech\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Alicates Hierro\",\n        \"description\": \"Peso 12 oz Garantía 3 meses Ancho18.3 cm Material de la cabeza Acero Espesor 2.7 cm Tipo de martillo Uña\",\n        \"price\": 3600.45,\n        \"image\": \"http://placeimg.com/640/480/tech\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Consultar Un Producto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/productos/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Consultar Un Producto",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Nov 2022 03:08:14 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"name\": \"Alicates Hierro\",\n    \"description\": \"Peso 12 oz Garantía 3 meses Ancho18.3 cm Material de la cabeza Acero Espesor 2.7 cm Tipo de martillo Uña\",\n    \"price\": 3600.45,\n    \"image\": \"http://placeimg.com/640/480/tech\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Crear Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 5,\r\n        \"name\": \"Alicates Hierro\",\r\n        \"description\": \"Peso 12 oz Garantía 3 meses Ancho18.3 cm Material de la cabeza Acero Espesor 2.7 cm Tipo de martillo Uña\",\r\n        \"price\": 3600.45,\r\n        \"image\": \"http://placeimg.com/640/480/tech\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/productos/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Crear Producto",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id\": 5,\r\n        \"name\": \"Alicates Hierro\",\r\n        \"description\": \"Peso 12 oz Garantía 3 meses Ancho18.3 cm Material de la cabeza Acero Espesor 2.7 cm Tipo de martillo Uña\",\r\n        \"price\": 3600.45,\r\n        \"image\": \"http://placeimg.com/640/480/tech\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/productos/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Location",
+							"value": "/producto/4"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Nov 2022 02:22:39 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"name\": \"Alicates Hierro\",\n    \"description\": \"Peso 12 oz Garantía 3 meses Ancho18.3 cm Material de la cabeza Acero Espesor 2.7 cm Tipo de martillo Uña\",\n    \"price\": 3600.45,\n    \"image\": \"http://placeimg.com/640/480/tech\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Eliminar Producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/productos/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Eliminar Producto",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"5"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 21 Nov 2022 03:26:26 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "ActualizarProducto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 5,\r\n        \"name\": \"Alicates Hierro Actualizado\",\r\n        \"description\": \"Peso 12 oz Garantía 3 meses Ancho18.3 cm Material de la cabeza Acero Espesor 2.7 cm Tipo de martillo Uña\",\r\n        \"price\": 3600.45,\r\n        \"image\": \"http://placeimg.com/640/480/tech\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/productos/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"productos",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ActualizarProducto",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id\": 5,\r\n        \"name\": \"Alicates Hierro Actualizado\",\r\n        \"description\": \"Peso 12 oz Garantía 3 meses Ancho18.3 cm Material de la cabeza Acero Espesor 2.7 cm Tipo de martillo Uña\",\r\n        \"price\": 3600.45,\r\n        \"image\": \"http://placeimg.com/640/480/tech\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/productos/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 21 Nov 2022 03:27:55 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 5,\n    \"name\": \"Alicates Hierro Actualizado\",\n    \"description\": \"Peso 12 oz Garantía 3 meses Ancho18.3 cm Material de la cabeza Acero Espesor 2.7 cm Tipo de martillo Uña\",\n    \"price\": 3600.45,\n    \"image\": \"http://placeimg.com/640/480/tech\"\n}"
+				}
+			]
+		}
+	]
+}
