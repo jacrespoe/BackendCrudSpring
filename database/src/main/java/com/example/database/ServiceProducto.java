@@ -8,6 +8,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.repository.query.FluentQuery;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
@@ -170,6 +171,11 @@ public class ServiceProducto implements Repository{
     @Override
     public <S extends Model, R> R findBy(Example<S> example, Function<FluentQuery.FetchableFluentQuery<S>, R> queryFunction) {
         return null;
+    }
+
+    @Override
+    public ArrayList<Model> findAllByTitleContaining(String query) {
+        return repository.findAllByTitleContaining(query);
     }
 }
 

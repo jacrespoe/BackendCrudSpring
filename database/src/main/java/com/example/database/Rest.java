@@ -61,6 +61,8 @@ public class Rest {
       return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
   }
+
+  @CrossOrigin(origins = "http://localhost:3000/")
   @PutMapping("/productos/{id}")
   public ResponseEntity<Model> updateProducto(@PathVariable("id") String id, @RequestBody Model producto) {
     Optional<Model> ProductoData = serviceProducto.findById(Long.valueOf(id));
@@ -95,6 +97,14 @@ public class Rest {
     }
   }
 
-   
+   @GetMapping(path = "/productos/buscar")
+   public ResponseEntity<Object> obtenerProductosPorNombre(@RequestParam("q") String query) {
+    Map<String, Object> map = new HashMap<String, Object>();
+            map.put("code", 200);
+            map.put("status", "OK");
+            map.put("data", (serviceProducto.findAllByTitleContaining(query)));
+
+       return new ResponseEntity<>(map, HttpStatus.OK);
+   }
 
 }
